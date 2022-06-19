@@ -13,7 +13,7 @@ COPY pnpm-lock.yaml ./
 RUN pnpm install
 COPY . .
 ARG API_URI
-ENV API_URI ${API_URI:-http://localhost:8000/graphql/}
+ENV API_URI ${API_URI:-https://hn-api.lamtrunghieu.com/graphql/}
 
 EXPOSE 3000
 CMD pnpm dev -- --hostname 0.0.0.0
